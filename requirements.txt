@@ -1,7 +1,7 @@
 streamlit
 pickl
 pickleshare
-nltk
 scikit-learn
-pandas
 numpy
+tensorflow
+protobuf==3.20.1

@@ -4,7 +4,8 @@ from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
 import numpy as np
 
-model = load_model('NN')
+model = load_model('NN',compile=False)
+model.compile()
 
 st.title('Image Classifier')
 input_image = st.file_uploader('Drop the image')

@@ -7,11 +7,11 @@ import numpy as np
 model = load_model('NN',compile=False)
 model.compile()
 
-st.title('Image Classifier')
+st.title('Dog/Cat Classification')
 input_image = st.file_uploader('Drop the image')
 
 
-if st.button('find'):
+if st.button('CHECK'):
     image = load_img(input_image, target_size=(50, 50,3))    
     img = img_to_array(image)
     img = np.array(img)
@@ -19,9 +19,9 @@ if st.button('find'):
     img2 = img1.reshape(1, 50, 50, 3)
     a = model.predict(img2)
     if a<0.5:
-        st.text('cat')
+        st.header('This seems CAT')
     else:
-        st.text('dog')
+        st.header('This seems DOG')
     image1 = load_img(input_image)
     image1 = img_to_array(image1)
     image1 = np.array(image1)

@@ -12,7 +12,7 @@ input_image = st.file_uploader('Drop the image')
 
 
 if st.button('find'):
-    image = load_img(input_image, target_size=(50, 50,3))
+    image = load_img(input_image, target_size=(50, 50,3))    
     img = img_to_array(image)
     img = np.array(img)
     img1 = img / 255.0
@@ -22,5 +22,8 @@ if st.button('find'):
         st.text('cat')
     else:
         st.text('dog')
+    image1 = load_img(input_image)
+    image1 = img_to_array(image1)
+    image1 = np.array(image1)
 
-    st.image(img1,width=500)
+    st.image(image1,width=500)

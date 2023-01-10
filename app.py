@@ -25,5 +25,6 @@ if st.button('find'):
     image1 = load_img(input_image)
     image1 = img_to_array(image1)
     image1 = np.array(image1)
+    image1 = image1/255.0
 
     st.image(image1,width=500)

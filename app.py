@@ -4,7 +4,7 @@ from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
 import numpy as np
 
-model = load_model('NN',compile=False)
+model = load_model('CNN',compile=False)
 model.compile()
 
 st.title('Dog/Cat Classification')
